@@ -4,7 +4,7 @@ Implementasi Design Pattern menggunakan Python.
 ### Creational Design Patterns
 [✅] [Factory Method](01_factory_method) </br>
 [✅] [Abstract Factory](02_abstract_factory) </br>
-[✅] [Builder](02_abstract_factory) </br>
+[✅] [Builder](03_builder) </br>
 [ ] Prototype </br>
 [ ] Singleton </br>
 
