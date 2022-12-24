@@ -1,11 +1,11 @@
 # Factory Method
 
-*Factory Method* adalah salah satu dari *creational design pattern* yang dimana kita membuat objek tidak secara langsung tetapi melalui sebuah *interface* atau *class*-nya. 
+*Factory Method* adalah salah satu dari *creational design pattern* yang dimana kita membuat objek tidak secara langsung tetapi melalui sebuah *interface* atau *class*. 
 
 ## Kapan Factory Method Digunakan ?
 Sebagai contoh kasusnya, misal kita membuat sebuah aplikasi untuk jasa pengantaran barang yang dimana pada saat itu hanya menggunakan kendaraan bermotor saja sebagai mode transportasinya. Tetapi seiring berkembangnya bisnis dan pasar ternyata dibutuhkan mode transportasi lainnya, seperti menggunakan mobil dan juga truk.
 
-Namun, karena kita tidak antisipasi hal ini pada akhirnya kita harus mengubah banyak sekali perubahan sesuai dengan bisnis logic-nya seperti perhitungan biaya pengiriman, maksimal berat barang yang dapat dibawa, dsb. Kelemahan lainnya adalah setiap ada penambahan mode transportasi baru maka diperlukan perubahan yang signifikan lagi dan membuat code base menjadi semakin kompleks. 
+Namun, karena kita tidak antisipasi hal ini pada akhirnya kita harus mengubah banyak sekali perubahan sesuai dengan bisnis logic-nya seperti perhitungan biaya pengiriman, maksimal berat barang yang dapat dibawa, dsb. Dimana kasus terburuknya kita harus implementasi banyak kondisi if,else untuk setiap variant objek yang berlaku. Kelemahan lainnya adalah setiap ada penambahan mode transportasi baru maka diperlukan perubahan yang signifikan lagi dan membuat code base menjadi semakin kompleks dan sangat sulit sekali pada saat debuging pada saat terjadi error. 
 
 ![alt text](/01_factory_method/img/factory-method-01.png)
 
@@ -148,3 +148,12 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+## Kelebihan dan Kekurangan Factory Method
+[✅] Single Responsibility Principle : Pembuatan objek tersentraliasi dalam satu `factory` class sehingga lebih mudah untuk di-maintain. </br>
+
+[✅] Open/Closed Principle : Kita dapat lebih mudah untuk menambahkan variant objek baru tanpa harus terlalu takut penambahkan  tersebut dapat merusak variant objek yang lain. </br>
+
+[❌] Kode akan semakin kompleks apabila terdapat penambahan banyak variant objek baru karena kita harus menyamakan interface sesuai dengan variant objek yang lain. </br>
+
+
