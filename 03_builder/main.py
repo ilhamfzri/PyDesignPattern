@@ -14,7 +14,5 @@ def main():
         print(f"Legs : {animal.legs}")
         print(f"Favorite Food : {animal.favorite_food}")
 
-
-
 if __name__ == '__main__':
     main()

@@ -10,9 +10,9 @@ Namun, karena kita tidak antisipasi hal ini pada akhirnya kita harus mengubah ba
 ![alt text](/01_factory_method/img/factory-method-01.png)
 
 Salah satu solusi yang dapat digunakan adalah dengan menerapkan *factory method*. Konsepnya adalah, pertama kita pisahkan terlebih dahulu objek yang memiliki business logic yang mirip, pada kasus ini adalah variant dari mode transportasi yaitu, `Motorcycle`, `Car` dan `Truck`. 
-Setiap objek dinyatakan dalam bentuk class yang dimana masing-masing memiliki interface fungsi yang sama artinya, jika menambahkan fungsi baru di `Motorcycle` maka wajib menambahkan juga di `Car` ataupun `Truck`. Dengan cara ini juga kita telah menerapkan *Sin­gle Respon­si­bil­i­ty Prin­ci­ple* yang dimana dapat lebih memudahkan kita pada saat proses testing.
+Setiap objek dinyatakan dalam bentuk class yang dimana masing-masing memiliki interface method yang sama artinya, jika menambahkan method baru di `Motorcycle` maka wajib menambahkan juga di `Car` ataupun `Truck`. Dengan cara ini juga kita telah menerapkan *Sin­gle Respon­si­bil­i­ty Prin­ci­ple* yang dimana dapat lebih memudahkan kita pada saat proses testing.
 
-Tahap selanjutnya adalah pembuatan `factory` class. `Factory` berfungsi untuk menghasilkan variant objek. Pada kasus ini direpresentasikan oleh `Transporation` class yang memiiki fungsi `create_transporation()` untuk menghasilkan objek.
+Tahap selanjutnya adalah pembuatan `factory` class. `Factory` berfungsi untuk menghasilkan variant objek. Pada kasus ini direpresentasikan oleh `Transporation` class yang memiiki method `create_transporation()` untuk menghasilkan objek.
 
 ## Implementasi Python
 Berikut adalah implementasi *factory method* menggunakan python.

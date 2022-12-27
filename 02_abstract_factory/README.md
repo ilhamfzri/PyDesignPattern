@@ -14,10 +14,10 @@ Berdasarkan gambar diatas, jika sebelum menggunakan *abstract factory* kita haru
 `Abstract products` adalah bagian untuk menyimpan interface atau kontrak yang dimana setiap variant dari objek harus mengikuti interface ini, yang artinya seperti pada contoh setiap `concrete products` harus memiki fungsi `get_socket_type()`. Pada kasus ini terdapat tiga buah `abstract products`, yaitu `abstract processor`, `abstract motherboard`, dan` abstract fan`. Pada implementasi realcasenya setiap jenis `abstract products` boleh memiliki interface yang berbeda-beda sesuai dengan business logicnya.
 
 #### 2. Concrete Products :
-`Concrete products` adalah bagian untuk menyimpan implementasi dari setiap variant produk yang terikat dengan `abstract products`. Pada kasus ini contohnya `AMD Processor` akan memiliki fungsi `get_socket_type()` yang akan mengembalikan jenis socket yang digunakan oleh vendor AMD.
+`Concrete products` adalah bagian untuk menyimpan implementasi dari setiap variant produk yang terikat dengan `abstract products`. Pada kasus ini contohnya `AMD Processor` akan memiliki method `get_socket_type()` yang akan mengembalikan jenis socket yang digunakan oleh vendor AMD.
 
 #### 3. Abstract Factory :
-`Abstract factory` berfungsi untuk menyimpan interface jenis produk apa saja yang akan dihasilkan oleh setiap `factory`. Pada kasus ini terdapat tiga, yaitu fungsi `create_processor()`, `create_motherboard()` dan `create_fan`.
+`Abstract factory` berfungsi untuk menyimpan interface jenis produk apa saja yang akan dihasilkan oleh setiap `factory`. Pada kasus ini terdapat tiga, yaitu method `create_processor()`, `create_motherboard()` dan `create_fan`.
 
 #### 4. Concrete Factory:
 `Concrete factory` adalah bagian yang berfungsi untuk menghasilkan `concrete product` yang terikat dengan interface `abstract factory`. Pada contoh `AMD Factory` berfungsi untuk menghasilkan produk objek dari `AMD Processor`, `AMD Motherboard` dan `AMD Fan`
@@ -153,7 +153,7 @@ Berdasarkan gambar diatas, jika sebelum menggunakan *abstract factory* kita haru
             pass
     ```
 
-4.  Setelah membuat `abstract factory`, kemudian kita implementasikan fungsi untuk menghasilkan `concrete factory` pada masing-masing `concrete factory` yaitu `IntelFactory` dan `AMDFactory` .
+4.  Setelah membuat `abstract factory`, kemudian kita implementasikan method untuk menghasilkan `concrete factory` pada masing-masing `concrete factory` yaitu `IntelFactory` dan `AMDFactory` .
 
     ```python
     ## factory/intel_factory.py
